@@ -8,9 +8,10 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
         }
@@ -20,6 +21,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
         }
         .profile-pic {
             width: 150px;
@@ -32,12 +35,56 @@
             font-size: 18px;
             color: #555;
         }
+        .project-card {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-decoration: none;
+            color: #000;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+        .project-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .project-card-content {
+            padding: 15px;
+        }
+        .project-card-content h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .project-card-content p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="imagens/perfil.png" alt="Foto de Perfil" class="profile-pic">
         <p class="description">Olá, sou Bruno Denardo, desenvolvedor e tester.</p>
+    </div>
+    </br>
+    <div class="container">
+        <h2>Meus Projetos</h2>
+        <a href="guara-internet-banking.html" class="project-card">
+            <img src="imagens/Guara.png" alt="Guara Internet Banking">
+            <div class="project-card-content">
+                <h3>Guara Internet Banking</h3>
+                <p>Projeto de sistema bancário online para depósitos, saques e transferências, usando Flask e MySQL.</p>
+            </div>
+        </a>
     </div>
 </body>
 </html>
